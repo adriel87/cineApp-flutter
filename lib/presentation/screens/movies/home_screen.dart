@@ -1,4 +1,6 @@
+import 'package:cinama_app/config/constant/environment.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class HomeScreen extends StatelessWidget {
 
@@ -8,8 +10,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Placeholder(),
+    return  Scaffold(
+      body: Center(child: Text(Environment.TMDB_KEY)),
     );
   }
 }
