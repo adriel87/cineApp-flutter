@@ -5,6 +5,7 @@ import '../../domain/entities/movie.dart';
 class MovieMapper {
   static final String noPosterFoundUrl = 'https://www.reelviews.net/resources/img/default_poster.jpg';
   static final String basePathImage = 'https://image.tmdb.org/t/p/w500';
+  
   static Movie movieDbToEntity(MovieFromMovieDb movieFromMovieDb) => Movie(
       adult: movieFromMovieDb.adult,
       backdropPath: movieFromMovieDb.backdropPath != '' 
@@ -18,7 +19,7 @@ class MovieMapper {
       popularity: movieFromMovieDb.popularity,
       posterPath: movieFromMovieDb.posterPath != '' 
         ? basePathImage + movieFromMovieDb.backdropPath
-        : noPosterFoundUrl,
+        : 'noPosterFoundUrl',
       releaseDate: movieFromMovieDb.releaseDate,
       title: movieFromMovieDb.title,
       video: movieFromMovieDb.video,
