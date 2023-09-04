@@ -1,6 +1,5 @@
 import 'package:cinama_app/config/constant/environment.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class HomeScreen extends StatelessWidget {
 
