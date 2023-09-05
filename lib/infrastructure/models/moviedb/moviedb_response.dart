@@ -16,7 +16,7 @@ class TmdbResponse {
     });
 
     factory TmdbResponse.fromJson(Map<String, dynamic> json) => TmdbResponse(
-        dates: json["dates"] ? Dates.fromJson(json["dates"]) : null,
+        dates: json["dates"] != null ? Dates.fromJson(json["dates"]) : null,
         page: json["page"],
         results: List<MovieFromMovieDb>.from(json["results"].map((x) => MovieFromMovieDb.fromJson(x))),
         totalPages: json["total_pages"],
